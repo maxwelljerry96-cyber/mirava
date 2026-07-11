@@ -1,4 +1,4 @@
-# Frutéo Full Homepage
+# Frutéo Full Homepage 
 
 A complete, responsive Vite website based on the approved Frutéo fruit-elixir homepage direction.
 
