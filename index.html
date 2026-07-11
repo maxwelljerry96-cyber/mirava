@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#120707" />
+  <meta name="description" content="MIRAVA Ember No. 01 — a cinematic botanical sparkling elixir experience." />
+  <title>MIRAVA — Ember No. 01</title>
+  <link rel="preconnect" href="https://www.pexels.com" />
+  <link rel="preconnect" href="https://videos.pexels.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-mark">M</div>
+    <div class="loader-line"><span></span></div>
+    <p>Preparing the ritual</p>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <a href="#top" class="brand" aria-label="MIRAVA home">
+      <span class="brand-mark">M</span>
+      <span>MIRAVA</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#essence">Essence</a>
+      <a href="#botanicals">Botanicals</a>
+      <a href="#ritual">Ritual</a>
+      <a href="#shop">Shop</a>
+    </nav>
+    <button class="bag-button" id="bagButton" type="button" aria-label="Open shopping bag">
+      Bag <span id="bagCount">0</span>
+    </button>
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav>
+      <a href="#essence">Essence</a>
+      <a href="#botanicals">Botanicals</a>
+      <a href="#ritual">Ritual</a>
+      <a href="#shop">Shop</a>
+    </nav>
+    <p>Botanical sparkle. Liquid fire.</p>
+  </div>
+
+  <div class="motion-stage" aria-hidden="true">
+    <video class="motion-video active" data-scene="0" muted loop playsinline preload="metadata" poster="public/images/hero-product.webp">
+      <source src="https://videos.pexels.com/video-files/30943121/13230731_1080_1920_30fps.mp4" type="video/mp4" />
+    </video>
+    <video class="motion-video" data-scene="1" muted loop playsinline preload="none" poster="public/images/liquid-ribbon.webp">
+      <source src="https://videos.pexels.com/video-files/3947193/3947193-hd_1920_1080_25fps.mp4" type="video/mp4" />
+    </video>
+    <video class="motion-video" data-scene="2" muted loop playsinline preload="none" poster="public/images/ingredients.webp">
+      <source src="https://videos.pexels.com/video-files/35146064/14888532_1920_1080_30fps.mp4" type="video/mp4" />
+    </video>
+    <video class="motion-video portrait-video" data-scene="3" muted loop playsinline preload="none" poster="public/images/final-packshot.webp">
+      <source src="https://videos.pexels.com/video-files/8093372/8093372-hd_1080_1920_30fps.mp4" type="video/mp4" />
+    </video>
+    <div class="motion-vignette"></div>
+    <div class="motion-wash"></div>
+  </div>
+
+  <main>
+    <section class="hero scene-section" id="top" data-scene="0">
+      <div class="hero-copy reveal-group">
+        <p class="eyebrow">Botanical sparkling elixir · No. 01</p>
+        <h1><span>Liquid</span><span>Fire.</span></h1>
+        <p class="hero-sub">Blood orange, hibiscus, ginger and saffron — composed for the slow hour after sunset.</p>
+        <a class="text-link" href="#essence">Enter the experience <span>↘</span></a>
+      </div>
+      <div class="hero-product-card" aria-hidden="true">
+        <img src="public/images/hero-product.webp" alt="" />
+      </div>
+      <div class="hero-index"><span>01</span><span>EMBER</span></div>
+      <div class="scroll-cue" aria-hidden="true"><span></span>Scroll to unfold</div>
+    </section>
+
+    <section class="manifesto dark-panel" id="essence">
+      <div class="section-number">01 / Essence</div>
+      <div class="manifesto-grid">
+        <h2 class="split-heading">Not a soda.<br />Not a spirit.<br /><em>A third thing.</em></h2>
+        <div class="manifesto-copy">
+          <p class="lead">EMBER No. 01 begins bright, turns floral, then leaves a warm line of ginger and saffron behind.</p>
+          <p>Built for people who want ceremony without heaviness. Pour it cold over one large cube, finish with a blood-orange peel, and let the room slow down.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene-section full-copy" data-scene="1">
+      <div class="scene-copy scene-copy-left">
+        <p class="eyebrow">The colour of dusk</p>
+        <h2>Crimson,<br />in motion.</h2>
+        <p>Every pour catches light differently. Ruby at the edge, ember at the centre, almost black in the glass.</p>
+      </div>
+      <div class="scene-label">Natural colour · No artificial dyes</div>
+    </section>
+
+    <section class="botanicals dark-panel" id="botanicals">
+      <div class="section-number">02 / Botanicals</div>
+      <div class="botanical-layout">
+        <div class="botanical-image magnetic-card">
+          <img src="public/images/ingredients.webp" alt="MIRAVA Ember bottle surrounded by blood orange, hibiscus, ginger and saffron" />
+          <div class="image-caption">Four botanicals. One controlled burn.</div>
+        </div>
+        <div class="ingredient-list" role="list">
+          <button type="button" class="ingredient active" data-note="Bright acidity and deep citrus oils."><span>01</span><strong>Blood orange</strong><em>Citrus sinensis</em></button>
+          <button type="button" class="ingredient" data-note="Tart florals with a dry red finish."><span>02</span><strong>Hibiscus</strong><em>Hibiscus sabdariffa</em></button>
+          <button type="button" class="ingredient" data-note="A clean warmth that arrives late."><span>03</span><strong>Ginger</strong><em>Zingiber officinale</em></button>
+          <button type="button" class="ingredient" data-note="Honeyed spice, lifted and aromatic."><span>04</span><strong>Saffron</strong><em>Crocus sativus</em></button>
+          <p class="ingredient-note" id="ingredientNote">Bright acidity and deep citrus oils.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene-section scene-explosion" data-scene="2">
+      <div class="scene-copy scene-copy-centre">
+        <p class="eyebrow">A controlled release</p>
+        <h2>The flavour<br />opens in layers.</h2>
+      </div>
+      <div class="floating-stat stat-one"><span>0.0%</span> alcohol</div>
+      <div class="floating-stat stat-two"><span>42</span> calories / serve</div>
+      <div class="floating-stat stat-three"><span>4</span> whole botanicals</div>
+    </section>
+
+    <section class="ritual cream-panel" id="ritual">
+      <div class="section-number">03 / The ritual</div>
+      <div class="ritual-heading">
+        <p class="eyebrow dark">Serve it slowly</p>
+        <h2>Cold glass.<br />One cube.<br />A twist.</h2>
+      </div>
+      <div class="ritual-steps">
+        <article>
+          <span>01</span>
+          <h3>Chill</h3>
+          <p>Keep the bottle cold. The aromatics become cleaner and the ginger stays precise.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Pour</h3>
+          <p>Use a short glass and one large cube. Give the bubbles room to carry the botanicals.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Finish</h3>
+          <p>Express a strip of blood-orange peel over the surface. Nothing more.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene-section pour-scene" data-scene="3">
+      <div class="pour-card">
+        <p class="eyebrow">The first impact</p>
+        <h2>Bright.<br />Cold.<br />Alive.</h2>
+        <p>The berry splash is not the product itself; it is the feeling we built the ritual around — sharp freshness breaking into still water.</p>
+      </div>
+    </section>
+
+    <section class="product-section dark-panel" id="shop">
+      <div class="section-number">04 / The bottle</div>
+      <div class="product-grid">
+        <div class="product-visual magnetic-card">
+          <div class="product-halo"></div>
+          <img src="public/images/final-packshot.webp" alt="MIRAVA Ember No. 01 bottle with botanical ingredients" />
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">EMBER No. 01</p>
+          <h2>A bottle for<br />the in-between hour.</h2>
+          <p>Deep citrus, tart florals and a warming finish. Serve chilled, with food or without occasion.</p>
+          <div class="product-meta">
+            <div><span>Size</span><strong>500 ml</strong></div>
+            <div><span>Alcohol</span><strong>0.0%</strong></div>
+            <div><span>Serves</span><strong>6–8</strong></div>
+          </div>
+          <div class="pack-selector" role="group" aria-label="Select pack size">
+            <button class="pack active" data-pack="Single bottle" data-price="24">Single</button>
+            <button class="pack" data-pack="Three-bottle set" data-price="64">Set of 3</button>
+            <button class="pack" data-pack="Six-bottle case" data-price="118">Case of 6</button>
+          </div>
+          <button class="add-button" id="addButton" type="button">
+            <span>Add to bag</span><strong id="price">$24</strong>
+          </button>
+          <p class="microcopy">Free delivery on three bottles or more.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter cream-panel">
+      <div>
+        <p class="eyebrow dark">The inner circle</p>
+        <h2>New rituals,<br />quietly delivered.</h2>
+      </div>
+      <form id="newsletterForm">
+        <label for="email">Email address</label>
+        <div class="email-row">
+          <input id="email" type="email" placeholder="you@example.com" required />
+          <button type="submit">Join</button>
+        </div>
+        <p id="formMessage" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">MIRAVA</div>
+    <div class="footer-columns">
+      <div><span>Explore</span><a href="#essence">Essence</a><a href="#botanicals">Botanicals</a><a href="#ritual">Ritual</a></div>
+      <div><span>Follow</span><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">Vimeo</a></div>
+      <div><span>Legal</span><a href="#">Shipping</a><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 MIRAVA</span><span>Concept site · Motion footage credited in CREDITS.md</span></div>
+  </footer>
+
+  <aside class="bag-drawer" id="bagDrawer" aria-hidden="true">
+    <div class="bag-head"><h2>Your bag</h2><button id="closeBag" type="button" aria-label="Close shopping bag">×</button></div>
+    <div class="bag-empty" id="bagEmpty"><p>Your evening is still empty.</p><span>Add EMBER No. 01 to begin.</span></div>
+    <div class="bag-item" id="bagItem" hidden>
+      <img src="public/images/hero-product.webp" alt="MIRAVA Ember No. 01" />
+      <div><strong id="bagPack">Single bottle</strong><span>EMBER No. 01</span><p id="bagPrice">$24</p></div>
+      <button id="removeItem" type="button">Remove</button>
+    </div>
+    <div class="bag-foot"><div><span>Total</span><strong id="bagTotal">$0</strong></div><button type="button" id="checkoutButton">Checkout</button><small>Demo checkout — no payment is processed.</small></div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
