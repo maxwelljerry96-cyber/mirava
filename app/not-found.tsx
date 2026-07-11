@@ -1,0 +1,1 @@
+import Link from 'next/link';export default function Page(){return <section className="page-shell container"><div className="empty-state large"><h1>This fruit rolled away.</h1><Link className="button button-primary" href="/">Back home</Link></div></section>}

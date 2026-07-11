@@ -1,0 +1,1 @@
+import {TrackForm} from '@/components/track-form';export default function Page(){return <section className="page-shell container"><div className="page-title"><span className="eyebrow">Order tracking</span><h1>Where Is Your FRUTÉO?</h1></div><TrackForm/></section>}

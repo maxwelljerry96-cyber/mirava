@@ -1,0 +1,1 @@
+import {CheckoutForm} from '@/components/checkout-form';export default function Page(){return <section className="page-shell container"><div className="page-title"><span className="eyebrow">Secure checkout</span><h1>Complete Your Order</h1><p>Server-side pricing, stock checks and Paystack payment.</p></div><CheckoutForm/></section>}

@@ -1,0 +1,1 @@
+import Image from 'next/image';import {AuthForm} from '@/components/auth-form';export default function Page(){return <section className="auth-shell container"><AuthForm mode="login"/><Image src="/assets/hero-splash-4k.webp" alt="Fruit splash" width={1200} height={900}/></section>}

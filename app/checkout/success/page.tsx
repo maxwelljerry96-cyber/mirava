@@ -1,0 +1,1 @@
+import {CheckoutSuccess} from '@/components/checkout-success';export default async function Page({searchParams}:{searchParams:Promise<{reference?:string;trxref?:string}>}){const p=await searchParams;return <section className="page-shell container"><CheckoutSuccess reference={p.reference||p.trxref}/></section>}
