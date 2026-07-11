@@ -1,44 +1,40 @@
-# MIRAVA — Motion-led product website
+# Frutéo Full Homepage
 
-A complete static website concept for **MIRAVA / EMBER No. 01**, a fictional botanical sparkling elixir.
+A complete, responsive Vite website based on the approved Frutéo fruit-elixir homepage direction.
 
-## What is included
+## Included
 
-- Full-screen motion footage that changes as the visitor scrolls
-- Cinematic product hero and original MIRAVA product artwork
-- Responsive desktop, tablet and mobile layouts
-- Interactive botanical ingredient section
-- Working pack selector and shopping-bag drawer
+- Full desktop and mobile homepage
+- High-resolution local image assets
+- Animated fruit, floating product visual, splash glow and droplets
+- Scroll reveals and parallax
+- Sticky responsive navigation
+- Product carousel and hover tilt
+- Working demo cart drawer
 - Newsletter interaction
-- Reduced-motion fallback for accessibility
-- Vercel configuration
-- No framework or build step required
+- GitHub/Vercel-ready configuration
 
 ## Run locally
 
-Open `index.html` directly, or run a small local server:
-
 ```bash
-python -m http.server 8080
+npm install
+npm run dev
 ```
 
-Then open `http://localhost:8080`.
+## Production build
 
-## Deploy to GitHub and Vercel
+```bash
+npm run build
+```
 
-1. Create a new GitHub repository.
-2. Upload every file and folder from this project.
-3. In Vercel, choose **Add New Project** and import the repository.
-4. Framework preset: **Other**.
-5. Leave the build command and output directory empty.
-6. Deploy.
+## Deploy to Vercel
 
-## Motion footage
+1. Upload this folder to a GitHub repository.
+2. Import the repository into Vercel.
+3. Vercel will detect Vite automatically.
+4. Build command: `npm run build`
+5. Output directory: `dist`
 
-The page streams four free-to-use Pexels clips from their download endpoints. The original source pages and creators are listed in `CREDITS.md`.
+## Image note
 
-This keeps the project ZIP small while still using real HD footage. For a fully self-contained site, download those clips from the source pages and replace each remote `<source src="...">` in `index.html` with a local file path such as `public/videos/scene-01.mp4`.
-
-## Important
-
-The cart and newsletter are front-end demonstrations. Connect them to Shopify, Stripe, WooCommerce, Formspree, Mailchimp or another backend before accepting real orders or subscribers.
+The packaged assets are exported at high pixel dimensions from the approved AI concept artwork. They are suitable for a polished web prototype, but they are not native camera-shot 4K product photographs. Replace files inside `public/assets` later if you commission final photography or 3D renders; the layout and animation code will continue to work.
