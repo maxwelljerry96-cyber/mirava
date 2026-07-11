@@ -1,40 +1,68 @@
-# Frutéo Full Homepage 
+# FRUTÉO — Full-Stack Fruit Elixir Store
 
-A complete, responsive Vite website based on the approved Frutéo fruit-elixir homepage direction.
+A production-structured, multi-page fruit juice and elixir store built with Next.js, Supabase, Paystack, Resend and Vercel.
 
-## Included
+## What is included
 
-- Full desktop and mobile homepage
-- High-resolution local image assets
-- Animated fruit, floating product visual, splash glow and droplets
-- Scroll reveals and parallax
-- Sticky responsive navigation
-- Product carousel and hover tilt
-- Working demo cart drawer
-- Newsletter interaction
-- GitHub/Vercel-ready configuration
+### Customer website
+- Home, products, individual product pages, story, ingredients, benefits, shop and contact
+- Search, product filtering and sorting
+- Persistent cart stored in the browser
+- Quantity controls and stock-aware cart behaviour
+- Guest checkout and signed-in checkout
+- Customer registration, login and logout
+- Customer order history and order detail pages
+- Order tracking by reference and checkout email
+- Newsletter sign-up and contact form
+- FAQ, shipping, returns, privacy and terms pages
+- Responsive layouts and high-resolution local image assets
+- Subtle reveal and interaction movement without bouncing animations
 
-## Run locally
+### Store operations
+- Product and bundle databases with prices, ingredients, component quantities, images, active status and stock
+- Server-side price, stock, coupon and shipping validation
+- Paystack checkout initialization
+- Paystack transaction verification
+- Signed Paystack webhook handling
+- Atomic order fulfilment and stock deduction, including component stock inside bundles
+- Contact-message and newsletter storage
+- Order-confirmation emails through Resend
+- Admin dashboard for products, images, stock, orders, messages and subscribers
+- Row-level security policies for customer data
 
-```bash
-npm install
-npm run dev
-```
+## Technology
+- Next.js App Router
+- React and TypeScript
+- Supabase Auth, Postgres and Storage
+- Paystack payments
+- Resend transactional email
+- Vercel deployment
+
+## Local setup
+
+1. Install Node.js 20.9 or newer.
+2. Copy `.env.example` to `.env.local`.
+3. Fill in the environment values described in `SETUP.md`.
+4. Run the SQL migration in Supabase:
+
+   `supabase/migrations/001_initial.sql`
+
+5. Install dependencies:
+
+   `npm install`
+
+6. Start development:
+
+   `npm run dev`
+
+7. Open `http://localhost:3000`.
 
 ## Production build
 
-```bash
-npm run build
-```
+`npm run build`
 
-## Deploy to Vercel
+The supplied source passes the Next.js production build.
 
-1. Upload this folder to a GitHub repository.
-2. Import the repository into Vercel.
-3. Vercel will detect Vite automatically.
-4. Build command: `npm run build`
-5. Output directory: `dist`
+## Important activation note
 
-## Image note
-
-The packaged assets are exported at high pixel dimensions from the approved AI concept artwork. They are suitable for a polished web prototype, but they are not native camera-shot 4K product photographs. Replace files inside `public/assets` later if you commission final photography or 3D renders; the layout and animation code will continue to work.
+The code contains the complete integrations, but live database access, real payments and real email delivery require credentials from the owner's Supabase, Paystack and Resend accounts. Secret keys are deliberately not included in the repository.

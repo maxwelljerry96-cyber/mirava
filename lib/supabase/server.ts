@@ -1,0 +1,2 @@
+import {createServerClient} from '@supabase/ssr';import {cookies} from 'next/headers';
+export async function createClient(){const u=process.env.NEXT_PUBLIC_SUPABASE_URL,k=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;if(!u||!k)throw new Error('Supabase is not configured.');const store=await cookies();return createServerClient(u,k,{cookies:{getAll:()=>store.getAll(),setAll(list){try{list.forEach(({name,value,options})=>store.set(name,value,options))}catch{}}}})}

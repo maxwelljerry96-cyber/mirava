@@ -1,0 +1,19 @@
+FRUTÉO FULL-STACK BUILD VERIFICATION
+Date: 2026-07-11
+
+Production checks completed:
+- npm run lint: PASSED
+- NEXT_TELEMETRY_DISABLED=1 npm run build: PASSED
+
+Verified application routes include:
+- Public storefront and product detail pages
+- Customer authentication and account routes
+- Persistent cart and checkout
+- Paystack initialization, verification and signed webhook endpoints
+- Order tracking
+- Admin overview, products, bundles, inventory, orders and messages
+- Contact, newsletter, FAQ, shipping, returns, privacy and terms
+- robots.txt and sitemap.xml
+
+Protected pages redirect unauthenticated visitors to login.
+Database-dependent endpoints return explicit configuration errors until the required private credentials are supplied.
